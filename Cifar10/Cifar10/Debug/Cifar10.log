@@ -1,0 +1,3 @@
+﻿  Cifar10.cpp
+D:\ASSET\NAM4HK2\C_Code\Cifar10\Cifar10\Cifar10\Cifar10.cpp(199,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Cifar10.vcxproj -> D:\ASSET\NAM4HK2\C_Code\Cifar10\Cifar10\Debug\Cifar10.exe
