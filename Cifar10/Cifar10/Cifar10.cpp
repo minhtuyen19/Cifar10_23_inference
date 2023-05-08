@@ -659,14 +659,12 @@ void main() {
     //xuat(out_dense_128, 128);
     relu(out_dense_128, 128, out_relu_128);
     //xuat(out_relu_128, 128);
-    //writefile("out_dense_128.txt", out_relu_128, 128);
+    //writefile1d("out_dense_128.txt", out_relu_128, 128);
 
     ////=============================Batch_Normalization_6================
 
     float out_batch_6[128];
-
-    //float* input_batch_4 = (float*)malloc((8 * 8 * 128) * sizeof(float));
-    int n_batch_6 = 0;
+    int n_batch_6 = 128;
     float mean_6[128];
     float variance_6[128];
     float scale_6[128];
@@ -675,13 +673,13 @@ void main() {
     int n_variance_6 = 128;
     int n_scale_6 = 128;
     int n_shift_6 = 128;
-    //readfile("D:/ASSET/NAM4HK2/C_Code/OUT_CIFAR10/out_relu_4.txt", input_batch_4, n_batch_4);
+    //readfile("D:/ASSET/NAM4HK2/C_Code/OUT_CIFAR10/out_dense_128.txt", out_re_128, n_batch_6);
     //xuat(input_batch_0, (32 * 32 * 32));
     readfile("D:/ASSET/NAM4HK2/C_Code/Cifar10/Cifar10/Cifar10/BatchNormalization_6/Mean.txt", mean_6, n_mean_6);
     readfile("D:/ASSET/NAM4HK2/C_Code/Cifar10/Cifar10/Cifar10/BatchNormalization_6/Variance.txt", variance_6, n_variance_6);
     readfile("D:/ASSET/NAM4HK2/C_Code/Cifar10/Cifar10/Cifar10/BatchNormalization_6/Scale.txt", scale_6, n_scale_6);
     readfile("D:/ASSET/NAM4HK2/C_Code/Cifar10/Cifar10/Cifar10/BatchNormalization_6/Shift.txt", shift_6, n_shift_6);
-    batch_norm(out_relu_128, out_batch_6, mean_6, variance_6, scale_6, shift_6, 1, 1, 1, 128);
+    batch_norm(out_relu_128, out_batch_6, mean_6, variance_6, scale_6, shift_6, 1, 128, 1, 1);
     xuat(out_batch_6, 128);
     //////============================Dropout_3===============================
     ////int size_3 = 1 * 1 * 128;
